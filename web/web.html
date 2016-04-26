@@ -1,0 +1,105 @@
+<!--<head>
+  <title>WEB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+</head>
+
+<body class="text-muted">
+	<h1>WEB: Listing Out Everything </h1>
+		<div class="container-fluid">
+			<div class="table">
+				<table class="table table-bordered table-responsive">
+					<thead><tr>
+
+						<th>Topic</th>
+						<th>Details</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+						<th>Time </th>
+						<th>Delete</th>
+					</tr></thead>
+					<tbody>
+					{{#each list}}
+						{{>entry}}
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	
+</body>-->
+
+<template name="entry">
+	
+    <tr>
+	<td><a href="{{pathFor route='show'}}" class ="iss">{{category}}</a></td><!--Added category to entry table-->
+    <td>{{topic}}</td>
+    <td> {{details}}</td> 
+	<td>{{longitude}} </td>
+    <td> {{latitude}}</td> 
+    <td>{{createdAt}}</td> 
+	<td>{{quantity}}</td>
+    <td><span class="delete  glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+   </tr>
+</template>
+<template name="showentry">
+	
+    <tr>
+	<td>{{category}}</td><!--Added category to entry table-->
+    <td>{{topic}}</td>
+    <td> {{details}}</td> 
+	<td>{{longitude}} </td>
+    <td> {{latitude}}</td> 
+    <td>{{createdAt}}</td> 
+   </tr>
+</template>
+<!--template for page to show given issues-->
+<template name="show">
+		<div class="container-fluid">
+			<div class="table">
+				<table class="table table-bordered table-responsive">
+					<thead><tr>
+						<th>Category</th><!--Added Category to table-->
+						<th>Topic</th>
+						<th>Details</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+						<th>Time </th>
+					</tr></thead>
+					<tbody>
+					{{#each list}}
+						{{>showentry}}
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+</template>
+<!--template for home page-->
+<template name ="home">
+<h1>WEB: Listing Out Everything </h1>
+		<div class="container-fluid">
+			<div class="table">
+				<table class="table table-bordered table-responsive">
+					<thead><tr>
+						<th>Category</th><!--Added Category to table-->
+						<th>Topic</th>
+						<th>Details</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+						<th>Time </th>
+						<th>Quantity Reported</th>
+						<th>Delete</th>
+					</tr></thead>
+					<tbody>
+					{{#each list}}
+						{{>entry}}
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+</template>

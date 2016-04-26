@@ -1,0 +1,51 @@
+<head>
+  <title>Mobile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body class="text-muted">
+	<h1>MOBILE: Form Entry</h1>
+		<div class="container-fluid">
+			
+				<form class="new-task form-inline">
+					<div class="form-group">
+					<label> Photo</label><br>
+		        		<img width="100" class="photo" style="display:none"><br>
+		        		{{>example}}<br> <br>
+						<label> Topic</label><br>
+						<label>Category</label><br><!-- Start of category-->
+						<input type="radio" class="form control" name ="category" value ="Grafitti"/>Grafitti
+						<input type="radio" class="form control" name ="category" value ="Park"/>Park
+						<input type="radio" class="form control" name ="category" value ="Pothole"/>Pothole
+						<input type="radio" class="form control" name ="category" value ="Vehicle"/>Vehicle
+						<input type="radio" class="form control" name ="category" value ="Sewer Spills"/>Sewer Spills
+						<input type="radio" class="form control" name ="category" value ="Streetlights"/>Streetlights
+						<input type="radio" class="form control" name ="category" value ="Traffic Signals"/>Traffic Signals
+						<input type="radio" class="form control" name ="category" value ="Illegal Dumping"/>Illegal Dumping
+						<input type="radio" class="form control" name ="category" value ="Trees"/>Trees
+						<input type="radio" class="form control" name ="category" value ="Sidewalks"/>Sidewalks<!--End of category-->
+						<br><label> Topic</label><br>
+						<input type="text" class="form-control" name="topic" placeholder="e.g. Grafitti..." />
+						<br><br><label> Extra Detail</label><br>
+		        		<input type="text" class="form-control" name="details" placeholder="e.g. in the park..." /> <br>
+						<br><label> longitude</label><br><!--longitude input for testing purposes-->
+						<input type="text" class="form-control" name="longitude" /> <br>
+						<br><label> latitude</label><br><!--latitude input for testing purposes-->
+						<input type="text" class="form-control" name="latitude" /> <br>
+		        		<button type="submit" class="btn btn-secondary" value="submit">submit</button>
+	        		</div>
+	        		
+	      		</form>
+			
+		</div>	
+</body>
+<template name="example">
+
+    <button type="submit" class="btn btn-secondary takePhoto">Take Photo</button>
+    
+</template>
+
+
